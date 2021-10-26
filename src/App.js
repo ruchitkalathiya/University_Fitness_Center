@@ -15,8 +15,8 @@ const App = () => (
     <Member />
     <Classes />
     <Schedule />
-    <Trainers />
     <Contact />
+    <Trainers />
   </div>
 );
 
