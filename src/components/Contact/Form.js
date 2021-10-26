@@ -8,7 +8,7 @@ const Form = ({ text }) => (
   <div css={styles} className="formContainer">
     <form>
       <input type="text" placeholder="Your Name*" />
-      <input type="text" placeholder="Your Email*" />
+      <input type="text" placeholder="Yoour Email*" />
       <input type="text" placeholder="Subject" />
       <textarea cols="30" rows="10" placeholder="Message"></textarea>
       <Button text="SEND MESSAGE" />
