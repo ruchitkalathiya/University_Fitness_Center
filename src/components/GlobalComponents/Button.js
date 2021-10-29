@@ -12,6 +12,7 @@ const styles = css`
   text-decoration: none;
   display: inline-block;
   background: #ed563b;
+  background-color: #d14646;
   color: #fff;
   font-size: 14px;
   padding: 12px 14px;

@@ -5,12 +5,14 @@ import Nav from "../Navbar/Nav";
 import Video from "./Video";
 import Overlay from "./Overlay";
 import Info from "./Info";
+import { FaBeer } from 'react-icons/fa';
+
 
 const Main = () => (
   <section css={styles} className="main" id="home">
     <Overlay />
     <Nav />
-    <Info />
+    <Info /> 
     <Video />
   </section>
 );

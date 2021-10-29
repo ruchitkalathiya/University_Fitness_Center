@@ -20,6 +20,7 @@ const LinksContainer = ({ hidden }) => {
 const styles = css`
   width: 100%;
   max-width: 620px;
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,12 +36,14 @@ const styles = css`
     background: rgba(35, 45, 57, 0.8);
     transition: top 1100ms ease-in-out, opacity 1100ms ease-in-out;
     &.hidden {
+      font-size: 30px;
       left: 0;
       top: -500px;
       opacity: 0;
     }
     .btn {
       width: 100%;
+      font-size: 30px;
       text-align: center;
       padding: 16px;
     }

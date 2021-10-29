@@ -12,13 +12,13 @@ const Classes = ({ text }) => {
   return (
     <section css={styles} className="ourClasses" id="ourClasses">
       <h2>
-        OUR <span>CLASSES</span>
+        TUTORIAL <span>EXERCISES</span>
       </h2>
       <Icon />
       <p>
-        Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra
+        This exercise you can do it by your self at home.
         <br />
-        ipsum dolor, ultricies fermentum massa consequat eu.
+        Do it with the perfect form.
       </p>
       <Container>
         <LinksContainer setTraining={setTraining} training={training} />
@@ -32,13 +32,14 @@ const styles = css`
   width: 100%;
   padding: 100px 0;
   text-align: center;
+  
   h2 {
     color: #232d39;
     font-size: 26px;
     font-weight: 900;
     line-height: 1;
     span {
-      color: #ed563b;
+      color: rgb(211, 101, 101);
     }
   }
   p {
@@ -50,6 +51,7 @@ const styles = css`
     display: flex;
     justify-content: space-between;
     padding: 80px 0 0 0;
+    color: rgb(177, 59, 59);
   }
   @media (max-width: 900px) {
     .container {
