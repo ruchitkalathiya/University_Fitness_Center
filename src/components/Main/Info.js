@@ -2,6 +2,8 @@
 import { jsx, css } from "@emotion/core";
 import React from "react";
 import Button from "../GlobalComponents/Button";
+import Socials from "./Socials";
+
 
 
 
@@ -27,6 +29,9 @@ function Info() {
 
   );
 }
+
+
+
 
 
 const styles = css`

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import React from "react";
-import Socials from "./Socials";
+//import Socials from "./Socials";
 
 const TrainerCard = ({ title, name, desc, img }) => (
   <div css={styles} className="card">
@@ -9,7 +9,6 @@ const TrainerCard = ({ title, name, desc, img }) => (
     <h5>{title}</h5>
     <h3>{name}</h3>
     <p>{desc}</p>
-    <Socials />
   </div>
 );
 

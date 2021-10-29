@@ -7,10 +7,10 @@ const Table = ({ day }) => {
     <table css={styles}>
       <tbody>
         <tr>
-          <td>Fitness Class</td>
+          <td>Boys gym</td>
           <td>
             <span className={day === "Monday" ? "" : "hidden"}>
-              10:00AM - 11:30AM
+              8:00AM - 11:30AM
             </span>
           </td>
           <td>
@@ -18,13 +18,9 @@ const Table = ({ day }) => {
               2:00PM - 3:30PM
             </span>
           </td>
-          <td>William G. Stewart</td>
-        </tr>
-        <tr>
-          <td>Muscle Training</td>
           <td>
-            <span className={day === "Friday" ? "" : "hidden"}>
-              10:00AM - 11:30AM
+            <span className={day === "Wednesday" ? "" : "hidden"}>
+              8:00AM - 11:30AM
             </span>
           </td>
           <td>
@@ -32,49 +28,39 @@ const Table = ({ day }) => {
               2:00PM - 3:30PM
             </span>
           </td>
-          <td>Boyd C. Harris</td>
-        </tr>
-        <tr>
-          <td>Body Building </td>
           <td>
-            <span className={day === "Tuesday" ? "" : "hidden"}>
+            <span className={day === "Friday" ? "" : "hidden"}>
               10:00AM - 11:30AM
             </span>
           </td>
+        </tr>
+        <tr>
+          <td>Girls gym </td>
           <td>
             <span className={day === "Monday" ? "" : "hidden"}>
+              8:00AM - 11:30AM
+            </span>
+          </td>
+          <td>
+            <span className={day === "Tuesday" ? "" : "hidden"}>
               2:00PM - 3:30PM
             </span>
           </td>
-          <td>Boyd C. Harris</td>
-        </tr>
-        <tr>
-          <td>Yoga Training Class </td>
           <td>
             <span className={day === "Wednesday" ? "" : "hidden"}>
-              10:00AM - 11:30AM
+              8:00AM - 11:30AM
+            </span>
+          </td>
+          <td>
+            <span className={day === "Thursday" ? "" : "hidden"}>
+              2:00PM - 3:30PM
             </span>
           </td>
           <td>
             <span className={day === "Friday" ? "" : "hidden"}>
-              2:00PM - 3:30PM
-            </span>
-          </td>
-          <td>Hector T. Daigle</td>
-        </tr>
-        <tr>
-          <td>Advanced Training </td>
-          <td>
-            <span className={day === "Thursday" ? "" : "hidden"}>
               10:00AM - 11:30AM
             </span>
           </td>
-          <td>
-            <span className={day === "Wednesday" ? "" : "hidden"}>
-              2:00PM - 3:30PM
-            </span>
-          </td>
-          <td>Bret D. Bowers</td>
         </tr>
       </tbody>
     </table>
