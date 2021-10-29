@@ -2,41 +2,63 @@
 import { jsx, css } from "@emotion/core";
 import React from "react";
 import Output from "./Output";
-import ClassOneBg from "../Image/classOne.jpg";
-import ClassTwoBg from "../Image/classTwo.jpg";
-import ClassThreeBg from "../Image/classThree.jpg";
-import ClassFourBg from "../Image/classFour.jpg";
+import ClassOneBg from "../Image/classOne.gif";
+import ClassOneBg1 from "../Image/classOne1.gif";
+import ClassOneBg2 from "../Image/classOne2.gif";
+import ClassTwoBg from "../Image/classTwo.gif";
+import ClassTwoBg1 from "../Image/classTwo1.gif";
+import ClassTwoBg2 from "../Image/classTwo2.gif";
+import ClassThreeBg from "../Image/classThree.gif";
+import ClassThreeBg1 from "../Image/classThree1.gif";
+import ClassThreeBg2 from "../Image/classThree2.gif";
+import ClassFourBg from "../Image/classFour.gif";
+import ClassFourBg1 from "../Image/classFour1.gif";
+import ClassFourBg2 from "../Image/classFour2.gif";
 
 const Results = ({ training }) => (
   <div css={styles} className="results">
     {training === "FirstClass" && (
       <Output
-        title="First Training Class"
-        info="Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam."
+        title="At-Home Workout"
+        info="If the idea of a home workout makes you yawn, think again!
+        When executed correctly, using just your body weight can give you a run for your money.
+        So, whether the gym isn’t your thing or you’re short on time, clear out a space in the living room and prepare to sweat."
         img={ClassOneBg}
+        img1={ClassOneBg1}
+        img2={ClassOneBg2}
+       
+        
+        
       />
     )}
 
     {training === "SecondClass" && (
       <Output
-        title="Second Training Class"
-        info="Integer dapibus, est vel dapibus mattis, sem mauris luctus leo, ac pulvinar quam tortor a velit. Praesent ultrices erat ante, in ultricies augue ultricies faucibus. Nam tellus nibh, ullamcorper at mattis non, rhoncus sed massa. Cras quis pulvinar eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+        title=" Resistance band Abs Workout"
+        info="Pressing into the band helps to activate the hip abductors, which are important stabilizers of the hip joint and lower back."
         img={ClassTwoBg}
+        img1={ClassTwoBg1}
+        img2={ClassTwoBg2}
       />
     )}
     {training === "ThirdClass" && (
       <Output
-        title="Third Training Class"
-        info="Fusce laoreet malesuada rhoncus. Donec ultricies diam tortor, id auctor neque posuere sit amet. Aliquam pharetra, augue vel cursus porta, nisi tortor vulputate sapien, id scelerisque felis magna id felis. Proin neque metus, pellentesque pharetra semper vel, accumsan a neque."
+        title="Pilates Workout"
+        info="'Pilates emphasises correct postural alignment, core strength and muscle balance. It is great for ironing out muscular imbalances, injury rehabilitation and injury prevention.'"
         img={ClassThreeBg}
+        img1={ClassThreeBg1}
+        img2={ClassThreeBg2}
       />
     )}
 
     {training === "FourthClass" && (
       <Output
         title="Fourth Training Class"
-        info="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ultrices elementum odio ac tempus. Etiam eleifend orci lectus, eget venenatis ipsum commodo et."
+        info="Regularly performing quad-strengthening exercises may help make it easier to extend your knee and flex your hip. Building strength in your quads may also improve the stability of your kneecap"
         img={ClassFourBg}
+        img1={ClassFourBg1}
+        img2={ClassFourBg2}
+
       />
     )}
   </div>

@@ -4,7 +4,7 @@ import React from "react";
 
 const Logo = () => (
   <h2 css={styles}>
-    TRAINING <span>STUDIO</span>
+    UNIVERSITY <span>FITNESS</span> CENTER
   </h2>
 );
 
@@ -15,7 +15,7 @@ const styles = css`
   line-height: 1;
   cursor: pointer;
   span {
-    color: #ed563b;
+    color:rgb(196, 40, 40);
   }
 `;
 

@@ -8,6 +8,8 @@ import Schedule from "./components/Schedule/Schedule";
 import Trainers from "./components/Trainers/Trainers";
 import Contact from './components/Contact/Contact';
 
+
+
 const App = () => (
   <div className="App">
     <Main />

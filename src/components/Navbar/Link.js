@@ -11,13 +11,13 @@ const Link = ({ name, linkTo }) => (
 const styles = css`
   text-decoration: none;
   display: inline-block;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 400;
   color: #fff;
   transition: color 600ms ease-in-out;
   &:first-of-type,
   &:hover {
-    color: #ed563b;
+    color: rgb(211, 101, 101);
   }
   @media (max-width: 1000px) {
     padding: 14px 0;
