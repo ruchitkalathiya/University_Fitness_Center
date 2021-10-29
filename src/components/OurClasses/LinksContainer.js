@@ -7,7 +7,7 @@ import { FaHome } from 'react-icons/fa';
 import { FaHeartbeat } from 'react-icons/fa';
 import { FaWalking } from 'react-icons/fa';
 import { GrYoga } from 'react-icons/gr';
-import { AiTwotoneFire } from 'react-icons/ai';
+
 
 
 
@@ -35,7 +35,7 @@ const LinksContainer = ({ setTraining, training }) => (
       className={training === "FourthClass" ? "active" : ""}
       onClick={() => setTraining("FourthClass")}
     >
-      <AiTwotoneFire color= "black" size="1.5em" /> <p>Squad Training</p>
+      <p>Squad Training</p>
     </button>
     <Button text="View All Schedules" />
   </div>

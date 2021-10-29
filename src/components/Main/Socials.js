@@ -14,6 +14,7 @@ const styles = css`
   display: flex;
   flex-direction: column;
   float: right;
+  z-index: 999;
   margin-top: -170px;
   i {
     margin-right: -560px;

@@ -2,12 +2,8 @@
 import { jsx, css } from "@emotion/core";
 import React from "react";
 import Button from "../GlobalComponents/Button";
-import Socials from "./Socials";
-
-
-
-
 import { FaAws } from 'react-icons/fa';
+import Socials from './Socials';
 
 
 
@@ -20,11 +16,7 @@ function Info() {
         FITNESS IS <span>NOT</span> A OPTION
       </h3>
       <Button text="BECOME A MEMBER" />
-     
-      
-     
-      
-
+      <Socials/>
     </div>
 
   );

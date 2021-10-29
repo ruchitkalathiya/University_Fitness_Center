@@ -5,8 +5,8 @@ import Nav from "../Navbar/Nav";
 import Video from "./Video";
 import Overlay from "./Overlay";
 import Info from "./Info";
-import { FaBeer } from 'react-icons/fa';
 import Socials from "./Socials";
+
 
 
 const Main = () => (
@@ -15,7 +15,7 @@ const Main = () => (
     <Nav />
     <Info /> 
     <Video />
-    <Socials/>
+    <Socials />
   </section>
 );
 
