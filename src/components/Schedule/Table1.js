@@ -32,22 +32,22 @@ const Table1 = ({ day }) => {
                         </td>
                         <td>
                             <span className={day === "Tuesday" ? "" : "hidden"}>
-                                
+                                {user.b1tuebs} - {user.b1tuebe}
                             </span>
                         </td>
                         <td>
                             <span className={day === "Wednesday" ? "" : "hidden"}>
-                                8:00AM - 11:30AM
+                                 {user.b1wedbs} - {user.b1wedbe}
                             </span>
                         </td>
                         <td>
                             <span className={day === "Thursday" ? "" : "hidden"}>
-                                2:00PM - 3:30PM
+                                  {user.b1thurbs} - {user.b1thurbe}
                             </span>
                         </td>
                         <td>
                             <span className={day === "Friday" ? "" : "hidden"}>
-                                10:00AM - 11:30AM
+                                  {user.b1fribs} - {user. b1fribe}
                             </span>
                         </td>
                     </tr>
@@ -55,27 +55,27 @@ const Table1 = ({ day }) => {
                         <td>Girls Time </td>
                         <td>
                             <span className={day === "Monday" ? "" : "hidden"}>
-                                8:00AM - 11:30AM
+                                {user.b1mongs} - {user.b1monge}
                             </span>
                         </td>
                         <td>
                             <span className={day === "Tuesday" ? "" : "hidden"}>
-                                2:00PM - 3:30PM
+                                 {user.b1tuegs} - {user.b1tuege}
                             </span>
                         </td>
                         <td>
                             <span className={day === "Wednesday" ? "" : "hidden"}>
-                                8:00AM - 11:30AM
+                                 {user.b1wedgs} - {user.b1wedge}
                             </span>
                         </td>
                         <td>
                             <span className={day === "Thursday" ? "" : "hidden"}>
-                                2:00PM - 3:30PM
+                                 {user.b1thurgs} - {user.b1thurge}
                             </span>
                         </td>
                         <td>
                             <span className={day === "Friday" ? "" : "hidden"}>
-                                10:00AM - 11:30AM
+                                 {user.b1frigs} - {user. b1frige}
                             </span>
                         </td>
                     </tr>

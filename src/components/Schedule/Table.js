@@ -1,9 +1,21 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const Table = ({ day }) => {
+
+  const [user,setUser] = useState('')
+
+    useEffect(() => {
+        axios.get('/users/gettimetable',{
+        }).then((res)=>{        
+            console.log(res.data[0])
+            setUser(res.data[0])
+        }).catch((err)=>{
+            console.log('error' + err)
+        })
+    }, [])
   return (
     <div className="container" css={styles}>
     <h2>Canteen Gym</h2>
@@ -13,27 +25,27 @@ const Table = ({ day }) => {
           <td>Boys Time</td>
           <td>
             <span className={day === "Monday" ? "" : "hidden"}>
-              8:00AM - 11:30AM
+               {user.b2monbs} - {user.b2monbe}
             </span>
           </td>
           <td>
             <span className={day === "Tuesday" ? "" : "hidden"}>
-              2:00PM - 3:30PM
+                {user.b2tuebs} - {user.b2tuebe}
             </span>
           </td>
           <td>
             <span className={day === "Wednesday" ? "" : "hidden"}>
-              8:00AM - 11:30AM
+                 {user.b2wedbs} - {user.b2wedbe}
             </span>
           </td>
           <td>
             <span className={day === "Thursday" ? "" : "hidden"}>
-              2:00PM - 3:30PM
+                 {user.b2thurbs} - {user.b2thurbe}
             </span>
           </td>
           <td>
             <span className={day === "Friday" ? "" : "hidden"}>
-              10:00AM - 11:30AM
+                 {user.b2fribs} - {user. b2fribe}
             </span>
           </td>
         </tr>
@@ -41,27 +53,27 @@ const Table = ({ day }) => {
           <td>Girls Time </td>
           <td>
             <span className={day === "Monday" ? "" : "hidden"}>
-              8:00AM - 11:30AM
+                  {user.b2mongs} - {user.b2monge}
             </span>
           </td>
           <td>
             <span className={day === "Tuesday" ? "" : "hidden"}>
-              2:00PM - 3:30PM
+                  {user.b2tuegs} - {user.b2tuege}
             </span>
           </td>
           <td>
             <span className={day === "Wednesday" ? "" : "hidden"}>
-              8:00AM - 11:30AM
+                  {user.b2wedgs} - {user.b2wedge}
             </span>
           </td>
           <td>
             <span className={day === "Thursday" ? "" : "hidden"}>
-              2:00PM - 3:30PM
+                  {user.b2thurgs} - {user.b2thurge}
             </span>
           </td>
           <td>
             <span className={day === "Friday" ? "" : "hidden"}>
-              10:00AM - 11:30AM
+                  {user.b2frigs} - {user. b2frige}
             </span>
           </td>
         </tr>
