@@ -108,10 +108,8 @@ function RegForm() {
       await axios.post(`/users/member`, {
         firstname, middlename, lastname, nameofinstitute: institute, nameofDepartment: department, studentIDEmployeeID, residentialAddress, city, zip, telephone, mobileno, email, dob, gender: gender, emergencyContactPerson, relation, telephone1,mobileno1:mobileNo1, email1, pimg: base64Image, memberType,bloodgrp,state 
       }).then((res) => {
-        console.log(res)
-        if (res.data.err == 'true') {
+        if (res.data === "error") 
           alert('already Member')
-        } 
         else alert('done');
       }).catch((err) => {
         alert('err');
@@ -120,11 +118,9 @@ function RegForm() {
     } else {
       await axios.post(`/users/member`, {
         firstname, middlename, lastname, nameofinstitute: institute, nameofDepartment: department, studentIDEmployeeID, residentialAddress, city, zip, telephone, mobileno, email, dob, gender: gender, emergencyContactPerson, relation, telephone1, mobileno1:mobileNo1, email1, pimg: base64Image, memberType,bloodgrp,state
-      }).then((res) => {
-        console.log(res)
-        if (res.data.err = 'true') {
-          alert('already Member')
-        }
+      }).then((res) => {                
+        if (res.data === "error") 
+          alert('already Member')      
         else alert('done');
       }).catch((err) => {
         alert('err');
@@ -178,7 +174,7 @@ function RegForm() {
         <Form.Group className="mb-3" controlId="formDepartmentNmae" >
           <Form.Label>Institute Name</Form.Label>
           <Form.Select defaultValue="institute"  onChange={changeSelectOptionHandler}>
-            <option disabled>Institute</option>
+            <option>Institute</option>
             <option value="cspit" selected={institute === "cspit"}>CSPIT</option>
             <option value="depstar" selected={institute === "depstar"}>DEPSTAR</option>
             <option value="rpcp" selected={institute === "rpcp"}>RMPCP</option>
@@ -348,16 +344,14 @@ function RegForm() {
               inline
               required
               label="Male"
-              name="gender"
-              checked={gender === "male"} 
+              name="gender"              
               onChange={(e) => {setGender(e.target.value)}}
               type={type}
               id={`inline-${type}-1`}
             />
             <Form.Check
               inline
-              required
-              checked={gender === "female"}
+              required              
               label="Female"
               name="gender"
               type={type}
