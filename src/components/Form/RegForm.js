@@ -7,12 +7,14 @@ import { useState } from 'react';
 import { Button } from "react-bootstrap"
 import { InputGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+import axios from 'axios';
 
 
 function RegForm() {
   
   const [validated, setValidated] = useState(false);
+  const [memberType, setMemberType] = useState('')
+  const [bloodgrp, setBloodgrp] = useState('')
 
   /*const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -65,6 +67,7 @@ function RegForm() {
     relation: '',
     telephone1: '',
     mobileNo1: '',
+    state:'',        
     email1: ''
   });
 
@@ -75,23 +78,40 @@ function RegForm() {
     value = e.target.value;
     setUser({ ...user, [name]: value })
   }
-    
-  const submitForm = async (e) => {
-    alert('here')
-    e.preventDefault();
-    const { firstname, middlename, lastname, nameofinstitute, nameofDepartment, studentIDEmployeeID, residentialAddress, city, zip, telephone, mobileno, email, dob, emergencyContactPerson, relation, telephone1, mobileNo1, email1 } = user;
-    console.log(firstname);
-    console.log(middlename);
+ 
+  const [base64Image, setbase64Image] = useState('')
+  const [previewSource, setPreviewSource] = useState('')
 
-    /*uploadImage(previewSource)
+    const uploadImage = async (base64EncodedImage) => {
+        setbase64Image(base64EncodedImage)
+    }
+    const handleFileInputChange = (e) =>{
+      const file = e.target.files[0]
+      previewFile(file)
+  }
+
+    const previewFile = (file) =>{
+      const reader = new FileReader()
+      reader.readAsDataURL(file)
+      reader.onloadend = () =>{
+          setPreviewSource(reader.result)
+      }
+  }
+    
+  const submitForm = async (e) => {    
+    e.preventDefault();
+    const { firstname, middlename, lastname, nameofinstitute, nameofDepartment, studentIDEmployeeID, residentialAddress, city, zip, telephone, mobileno, email, dob, emergencyContactPerson, relation, telephone1, mobileNo1, email1 ,state } = user;    
+
+    uploadImage(previewSource)
     
     if (base64Image == null) {
       await axios.post(`/users/member`, {
-        firstname, middlename, lastname, nameofinstitute: institute, nameofDepartment: department, studentIDEmployeeID, residentialAddress, city, zip, telephone, mobileno, email, dob, gender: gender, emergencyContactPerson, relation, telephone1, mobileNo1, email1
+        firstname, middlename, lastname, nameofinstitute: institute, nameofDepartment: department, studentIDEmployeeID, residentialAddress, city, zip, telephone, mobileno, email, dob, gender: gender, emergencyContactPerson, relation, telephone1,mobileno1:mobileNo1, email1, pimg: base64Image, memberType,bloodgrp,state 
       }).then((res) => {
+        console.log(res)
         if (res.data.err == 'true') {
           alert('already Member')
-        }
+        } 
         else alert('done');
       }).catch((err) => {
         alert('err');
@@ -99,8 +119,9 @@ function RegForm() {
       });
     } else {
       await axios.post(`/users/member`, {
-        firstname, middlename, lastname, nameofinstitute: institute, nameofDepartment: department, studentIDEmployeeID, residentialAddress, city, zip, telephone, mobileno, email, dob, gender: gender, emergencyContactPerson, relation, telephone1, mobileNo1, email1, pimg: base64Image
+        firstname, middlename, lastname, nameofinstitute: institute, nameofDepartment: department, studentIDEmployeeID, residentialAddress, city, zip, telephone, mobileno, email, dob, gender: gender, emergencyContactPerson, relation, telephone1, mobileno1:mobileNo1, email1, pimg: base64Image, memberType,bloodgrp,state
       }).then((res) => {
+        console.log(res)
         if (res.data.err = 'true') {
           alert('already Member')
         }
@@ -109,7 +130,7 @@ function RegForm() {
         alert('err');
         console.log(err);
       });
-    }*/
+    }
   }
 
   return (
@@ -151,12 +172,7 @@ function RegForm() {
             />
             <Form.Control.Feedback type="invalid">please enter your lastname</Form.Control.Feedback>
           </Form.Group>
-          <Col>
-            <Form.Group className="mb-3" controlId="formSignatutrePhoto">
-              <Form.Label>Signature Photo</Form.Label>
-              <Form.Control type="file" required  name="pimg" />
-            </Form.Group>
-          </Col>
+          
         </Row>
 
         <Form.Group className="mb-3" controlId="formDepartmentNmae" >
@@ -266,8 +282,8 @@ function RegForm() {
               />
             </Col>
             <Col>
-              <Form.Label>Type</Form.Label>
-              <Form.Select>
+              <Form.Label >Type</Form.Label>
+              <Form.Select name="membertype"  onChange={(e) => { setMemberType(e.target.value) }}>
                 <option disabled>choose</option>
                 <option>Student</option>
                 <option>faculty</option>
@@ -282,21 +298,24 @@ function RegForm() {
           <Form.Control as="textarea" rows={4} type="address" required   name="residentialAddress" value={user.residentialAddress} onChange={handleinputs} placeholder="Enter your Address" />
           <Form.Control.Feedback type="invalid">please enter your address</Form.Control.Feedback>
         </Form.Group>
+
         <Row className="mb-3">
           <Form.Group as={Col} md="6" controlId="validationCustom03">
             <Form.Label>City</Form.Label>
-            <Form.Control type="text" placeholder="City" name="city" required />
+            <Form.Control type="text" placeholder="City" onChange={handleinputs} name="city" required />
             <Form.Control.Feedback type="invalid">
               Please provide a valid city.
             </Form.Control.Feedback>
           </Form.Group>
+
           <Form.Group as={Col} md="3" controlId="validationCustom04">
             <Form.Label>State</Form.Label>
-            <Form.Control type="text" placeholder="State" name="state" required />
+            <Form.Control type="text" placeholder="State" onChange={handleinputs} name="state" required />
             <Form.Control.Feedback type="invalid">
               Please provide a valid state.
             </Form.Control.Feedback>
           </Form.Group>
+
           <Form.Group as={Col} md="3" controlId="validationCustom05">
             <Form.Label>Zip</Form.Label>
             <Form.Control type="text" placeholder="Zip"  name="zip" onChange={handleinputs}   required />
@@ -347,7 +366,6 @@ function RegForm() {
             />
           </div>
         ))}
-
         
         <Form.Group className="mb-3" controlId="formdob">
           <Form.Label>Date of Birth</Form.Label>
@@ -356,10 +374,11 @@ function RegForm() {
         </Form.Group>
         <Row>
           <Col>
-            <Form.Group className="mb-3" controlId="formBloodGroup">
+            <Form.Group className="mb-3"  controlId="formBloodGroup">
               <Form.Label>Blood Group</Form.Label>
 
-              <Form.Select defaultValue="Blood Group">
+              <Form.Select name="bloodgrp" defaultValue="Blood Group" 
+               onChange={(e) => { setBloodgrp(e.target.value) }}>
                 <option disabled>choose</option>
                 <option>A+</option>
                 <option>B+</option>
@@ -424,6 +443,26 @@ function RegForm() {
                 notified to me from time to time"
           />
         </Form.Group>
+
+        <Col>
+            <Form.Group className="mb-3" controlId="formSignatutrePhoto">
+              <Form.Label>Signature Photo</Form.Label>
+              <Form.Control type="file" required id="pimg" name="pimg"
+              onChange={handleFileInputChange} />
+            </Form.Group>
+        </Col>
+
+        {previewSource && (
+            <>
+                <div style={{"margin-top":"20px"}}>
+                <h5> Profile Image</h5>
+                <img src={previewSource} alt="chosen"
+                style={{height:"200px",margin:"5px"}}/>
+                </div>
+            </>
+        )}
+
+
         <Button type="submit" name="submit">Submit form</Button>
       </Form>
     </div>
