@@ -1,9 +1,23 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import  { useState } from "react";
+import  { useState,useEffect } from "react";
+import axios from 'axios'
 
 const Table1 = ({ day }) => {
+
+    const [user,setUser] = useState('')
+
+    useEffect(() => {
+        axios.get('/users/gettimetable',{
+        }).then((res)=>{        
+            console.log(res.data[0])
+            setUser(res.data[0])
+        }).catch((err)=>{
+            console.log('error' + err)
+        })
+    }, [])
+
     return (
         <div className="container" css={styles}>
             <h2>Physiotherapy Gym</h2>
@@ -13,12 +27,12 @@ const Table1 = ({ day }) => {
                         <td>Boys Time</td>
                         <td>
                             <span className={day === "Monday" ? "" : "hidden"}>
-                                8:00AM - 11:30AM
+                                {user.b1monbs} - {user.b1monbe} 
                             </span>
                         </td>
                         <td>
                             <span className={day === "Tuesday" ? "" : "hidden"}>
-                                2:00PM - 3:30PM
+                                
                             </span>
                         </td>
                         <td>
