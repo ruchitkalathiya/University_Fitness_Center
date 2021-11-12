@@ -1,6 +1,6 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import React from "react";
 import Link from "./Link";
 import Button from "../GlobalComponents/Button";
 
@@ -12,7 +12,7 @@ const LinksContainer = ({ hidden }) => {
       <Link name="CLASSES" linkTo="#ourClasses" />
       <Link name="SCHEDULES" linkTo="#schedule" />
       <Link name="CONTACT" linkTo="#contact" />
-      <Button text="SIGN UP" />
+      <Button text="Payment" />
     </div>
   );
 };
@@ -20,12 +20,11 @@ const LinksContainer = ({ hidden }) => {
 const styles = css`
   width: 100%;
   max-width: 620px;
-  
   display: flex;
   align-items: center;
   justify-content: space-between;
   @media (max-width: 1000px) {
-    max-width: 100%;
+    
     padding: 0 30px 20px 30px;
     flex-direction: column;
     align-items: flex-start;

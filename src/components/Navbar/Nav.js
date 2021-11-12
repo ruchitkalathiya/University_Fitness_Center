@@ -1,6 +1,7 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import React, { useState } from "react";
+import { useState } from "react";
 import Logo from "./Logo";
 import LinksContainer from "./LinksContainer";
 import Container from "../GlobalComponents/Container";
@@ -25,10 +26,10 @@ const Nav = () => {
 
 const styles = css`
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   padding: 20px 0;
-  background: rgba(250, 250, 250, 0.1);
+  background: rgb(190 213 213 / 92%);
   z-index: 20;
   .container {
     display: flex;

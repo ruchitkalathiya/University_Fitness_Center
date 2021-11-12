@@ -1,13 +1,12 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import React from "react";
 //import Socials from "./Socials";
 
 const TrainerCard = ({ title, name, desc, img }) => (
   <div css={styles} className="card">
     <img src={img} alt="trainer" />
     <h5>{title}</h5>
-    <h3>{name}</h3>
     <p>{desc}</p>
   </div>
 );

@@ -1,0 +1,49 @@
+.RegForm .container {
+ 
+    display: flex;
+    align-items: center;
+    justify-Content: center;
+    box-sizing: border-box;
+}
+.RegForm .mb-3{
+    margin-top: 0.5cm;
+    color:rgb(24, 23, 23);
+}
+
+
+.RegForm Form.Label {
+    color: rgb(10, 10, 10);
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 120px rgb(76, 24, 172);
+  }
+  
+  .RegForm Form{
+    border-style:solid;
+    border-radius: 2px;
+    padding-top: 1cm;
+    padding-left: 1cm;
+    padding-right: 2cm;
+    padding-bottom: 1cm;
+}
+.RegForm body{
+    /* background-Image: url('./wallpapers/mendb.jpg'); */
+
+   background-attachment: scroll;
+    background-repeat: no-repeat;
+    
+    background-size: 100% 100%;
+}
+
+.RegForm h2 {
+    text-align: center;
+    color:rgb(15, 15, 15);
+    padding-bottom: 2cm;
+}
+

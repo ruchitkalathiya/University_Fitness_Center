@@ -1,13 +1,16 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Table = ({ day }) => {
   return (
-    <table css={styles}>
+    <div className="container" css={styles}>
+    <h2>Canteen Gym</h2>
+    <table css={styles}> 
       <tbody>
         <tr>
-          <td>Boys gym</td>
+          <td>Boys Time</td>
           <td>
             <span className={day === "Monday" ? "" : "hidden"}>
               8:00AM - 11:30AM
@@ -35,7 +38,7 @@ const Table = ({ day }) => {
           </td>
         </tr>
         <tr>
-          <td>Girls gym </td>
+          <td>Girls Time </td>
           <td>
             <span className={day === "Monday" ? "" : "hidden"}>
               8:00AM - 11:30AM
@@ -64,13 +67,27 @@ const Table = ({ day }) => {
         </tr>
       </tbody>
     </table>
+    </div>
   );
 };
 
 const styles = css`
   border-collapse: collapse;
   color: #fff;
-  margin: 30px 0 0 0;
+  margin: 50px 0 0 0;
+  h2 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 30px;
+    width:500px;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 1.3px;
+    line-height: 1;
+    span {
+      color: #ed563b;
+    }
+  }
   td,
   th {
     border: 1px solid #fff;

@@ -1,6 +1,6 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import React from "react";
 import Icon from "../GlobalComponents/Icon";
 import TrainerCard from "./TrainerCard";
 import Container from "../GlobalComponents/Container";
@@ -11,31 +11,23 @@ import TrainerThreeBg from "../Image/trainerThree.jpg";
 const Trainers = () => (
   <section css={styles} className="trainers" id="trainers">
     <h2>
-      EXPERT <span>TRAINERS</span>
+      Gym <span>Fee</span>
     </h2>
     <Icon />
-    <p>
-      Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra{" "}
-      <br />
-      ipsum dolor, ultricies fermentum massa consequat eu.
-    </p>
     <Container>
       <TrainerCard
-        title="Strength Trainer"
-        name="Bret D. Bowers"
-        desc="Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel."
+        title="Student"
+        desc="fees- 300-/rupee per month"
         img={TrainerOneBg}
       />
       <TrainerCard
-        title="Muscle Trainer"
-        name="Hector T. Daigl"
-        desc="Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel."
+        title="Faculty"
+        desc="fees- 300-/rupee per month"
         img={TrainerTwoBg}
       />
       <TrainerCard
-        title="Power Trainer"
-        name="Paul D. Newman"
-        desc="Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel."
+        title="Staff"
+        desc="fees- 300-/rupee per month"
         img={TrainerThreeBg}
       />
     </Container>

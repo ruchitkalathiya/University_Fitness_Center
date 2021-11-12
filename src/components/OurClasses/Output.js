@@ -1,6 +1,6 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import React from "react";
 import Button from "../GlobalComponents/Button";
 
 const Output = ({ title, info, img, img1, img2 }) => (
@@ -14,7 +14,6 @@ const Output = ({ title, info, img, img1, img2 }) => (
     <br></br>
     <h2>{title}</h2>
     <p>{info}</p>
-    <Button text="VIEW SCHEDULE" />
   </div>
 );
 

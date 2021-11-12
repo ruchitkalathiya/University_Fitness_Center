@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import React from "react";
@@ -11,7 +12,7 @@ const styles = css`
   bottom: 0;
   left: 0;
   background: #98a0a7;
-  z-index: -1;
+  z-index : -1;
 `;
 
 export default Overlay;

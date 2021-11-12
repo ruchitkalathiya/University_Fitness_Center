@@ -1,22 +1,27 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import React from "react";
 import Button from "../GlobalComponents/Button";
 import { FaAws } from 'react-icons/fa';
 import Socials from './Socials';
-
-
-
+import {Link} from "react-router-dom";
 
 function Info() {
+
+ // const history=useHistory();
+
+  //const redirect = () => {
+   // history.push("/RegForm")
+ //}
   return (
     <div css={styles} className="info">
       <p>WORK HARDER, GET STRONGER</p>
       <h3>
         FITNESS IS <span>NOT</span> A OPTION
       </h3>
-      <Button text="BECOME A MEMBER" />
-      <Socials/>
+      <Link className="btn btn-outline-light btn-lg" role="button" to="/RegForm">Become a Member</Link>
+      <Socials />
     </div>
 
   );
@@ -38,7 +43,6 @@ const styles = css`
   color: #fff;
   p {
     font-size: 1.5em;
-    
     line-height: 1;
     font-weight: 900;
     letter-spacing: 1.2px;

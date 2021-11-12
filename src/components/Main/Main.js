@@ -1,11 +1,10 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import React from "react";
 import Nav from "../Navbar/Nav";
 import Video from "./Video";
 import Overlay from "./Overlay";
 import Info from "./Info";
-import Socials from "./Socials";
 
 
 
@@ -15,7 +14,6 @@ const Main = () => (
     <Nav />
     <Info /> 
     <Video />
-    <Socials />
   </section>
 );
 

@@ -1,5 +1,7 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+
+import { jsx, css } from "@emotion/react";
 import React from "react";
 import Button from "../GlobalComponents/Button";
 import ContactBg from "../Image/contactBg.jpg";
@@ -17,11 +19,10 @@ const Form = ({ text }) => (
 );
 
 const styles = css`
-  width: 100%;
+  width: 50%;
   padding: 80px;
   min-height: 60vh;
-  display: flex;
-  background: url('${ContactBg}') no-repeat center/cover;
+  display: inline-block;
   form {
     margin: auto;
     display: flex;

@@ -1,6 +1,6 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import React from "react";
 import DumbbellBg from "../Image/dumbbellOrange.png";
 import Button from "../GlobalComponents/Button";
 import { FaHome } from 'react-icons/fa';
@@ -37,7 +37,6 @@ const LinksContainer = ({ setTraining, training }) => (
     >
       <p>Squad Training</p>
     </button>
-    <Button text="View All Schedules" />
   </div>
 );
 

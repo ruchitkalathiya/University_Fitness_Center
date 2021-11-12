@@ -1,10 +1,12 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import React, { useState } from "react";
+import  { useState } from "react";
 import Icon from "../GlobalComponents/Icon";
 import scheduleBg from "../Image/scheduleBg.jpg";
 import ScheduleLinks from "./ScheduleLinks";
 import Table from "./Table";
+import Table1 from "./Table1";
 import Container from "../GlobalComponents/Container";
 
 const Schedule = () => {
@@ -17,14 +19,10 @@ const Schedule = () => {
         CLASSES <span>SCHEDULE</span>
       </h2>
       <Icon />
-      <p>
-        Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra
-        <br />
-        ipsum dolor, ultricies fermentum massa consequat eu.
-      </p>
       <Container>
         <ScheduleLinks setDay={setDay} day={day} />
         <Table day={day} />
+        <Table1 day={day}/>
       </Container>
     </section>
   );
@@ -32,7 +30,7 @@ const Schedule = () => {
 
 const styles = css`
   width: 100%;
-  padding: 120px 0;
+  padding: 80px 0;
   min-height: 100vh;
   text-align: center;
   background: url('${scheduleBg}') no-repeat center/cover;
@@ -45,12 +43,6 @@ const styles = css`
     span {
       color: #ed563b;
     }
-  }
-  p {
-    color: #fff;
-    font-size: 16px;
-    line-height: 1.7;
-    margin: 20px 0;
   }
   .container{
       display: flex;

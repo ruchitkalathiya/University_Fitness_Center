@@ -1,6 +1,6 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import React from "react";
 
 const ScheduleLinks = ({ setDay , day}) => {
   return (
@@ -29,7 +29,7 @@ const ScheduleLinks = ({ setDay , day}) => {
 };
 
 const styles = css`
-  padding: 40px 0 0 0;
+  padding: 30px 0 0 0;
   button {
     color: #fff;
     text-decoration: none;
