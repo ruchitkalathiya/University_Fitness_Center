@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { useState,useEffect } from "react";
+import axios from 'axios'
 
 const Table = ({ day }) => {
 
