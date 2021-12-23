@@ -1,16 +1,24 @@
+
 .RegForm .container {
- 
     display: flex;
     align-items: center;
     justify-Content: center;
     box-sizing: border-box;
+} 
+h3.header{
+    font-size: 35px;
+    line-height: 1;
+    font-weight: 900;
+    margin: 36px 0;
+    margin-bottom: 2%;
+    font-family:Georgia, serif;
+    text-align: center;
+    align-items: center;
 }
 .RegForm .mb-3{
     margin-top: 0.5cm;
     color:rgb(24, 23, 23);
 }
-
-
 .RegForm Form.Label {
     color: rgb(10, 10, 10);
     text-shadow:

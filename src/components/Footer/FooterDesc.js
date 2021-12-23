@@ -8,7 +8,7 @@ const FooterDesc = () => (
         <div class="site-footer">
             <div class="first-col">
                 <h6>About</h6>
-                <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quibusdam culpa assumenda dolore soluta ipsa animi recusandae quidem, iste asperiores, laboriosam iusto. Nulla voluptates fugit atque eligendi repudiandae. Qui aliquid temporibus quasi nobis ipsum.</p>
+                <p class="text-justify">Gymnasium with Multi Gym facilities is available at campus for utilization by students and staff from 7:00 am to 7:00 pm. It has an area of about 275 sq. m. Another Fitness Centre is also in the physiotherapy institute building in the healthcare zone of the campus. </p>
             </div>
 
             <div class="second-col">
@@ -25,11 +25,10 @@ const FooterDesc = () => (
             <div class="third-col">
                 <h6>Quick Links</h6>
                 <ul class="footer-links">
-                    <li><a href="/">About Us</a></li>
-                    <li><a href="/">Contact Us</a></li>
-                    <li><a href="/">Contribute</a></li>
-                    <li><a href="/">Privacy Policy</a></li>
-                    <li><a href="/">Sitemap</a></li>
+                    <li><a href="/">ABOUT</a></li>
+                    <li><a href="/">CLASSES</a></li>
+                    <li><a href="/">SCHEDULES</a></li>
+                    <li><a href="/">CONTACT</a></li>
                 </ul>
             </div>
         </div>
