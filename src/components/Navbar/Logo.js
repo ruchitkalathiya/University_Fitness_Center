@@ -13,7 +13,8 @@ const styles = css`
   font-size: 30px;
   font-weight: 900;
   line-height: 1;
-  margin-top: 10px;
+  margin-top: 8px;
+  margin-left: -140px;
   cursor: pointer;
   span {
     color:rgb(196, 40, 40);

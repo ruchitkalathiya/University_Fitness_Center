@@ -8,9 +8,10 @@ import Classes from "./components/OurClasses/Classes";
 import Schedule from "./components/Schedule/Schedule";
 import Trainers from "./components/Trainers/Trainers";
 import Contact from './components/Contact/Contact';
-import Gallary from "./components/Gallary/Gallary";
 import RegForm from "./components/Form/RegForm";
 import Footer from "./components/Footer/Footer";
+import ImageSlider from "./components/Gallary/Imageslider";
+import { SliderData } from './components/Gallary/SliderData';
 
 
 
@@ -27,7 +28,7 @@ const App = () => (
           <Classes />
           <Schedule />
           <Member />
-          <Gallary />
+          <ImageSlider slides={SliderData} />;
           <Contact />
           <Footer />
         </Route>

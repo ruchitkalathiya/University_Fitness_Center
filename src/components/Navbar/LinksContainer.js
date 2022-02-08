@@ -22,6 +22,7 @@ const styles = css`
   max-width: 620px;
   display: flex;
   align-items: center;
+  margin-right: -120px;
   justify-content: space-between;
   @media (max-width: 1000px) {
     

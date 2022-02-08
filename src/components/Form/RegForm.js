@@ -134,7 +134,7 @@ function RegForm() {
 
       <Form noValidate validated={validated} onSubmit={submitForm}>
         <h3 class="header">Registration Form</h3>
-        <Link className="btn btn-outline btn-lg" role="button" to="/">Back</Link>
+        <Link className="btn btn-outline btn-dark" role="button" to="/">Back</Link>
         <Row className="mb-3">
           <Form.Group as={Col} md="4" controlId="validationCustom01">
             <Form.Label>First name</Form.Label>
